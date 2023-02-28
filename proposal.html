@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glow-text {
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 70px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.8), 0 0 100px rgba(255, 255, 255, 0.8);
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 70px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.8), 0 0 100px rgba(255, 255, 255, 0.8);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.8), 0 0 90px rgba(255, 255, 255, 0.8), 0 0 100px rgba(255, 255, 255, 0.8), 0 0 120px rgba(255, 255, 255, 0.8);
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body class="w-4/5 m-auto text-center bg-cover bg-center h-screen" style="background-image: url(./Untitled-1.jpg); font-family: 'Dancing Script', cursive;
+font-family: 'Satisfy', cursive;">
+    <div class="mt-10 mb-10">
+        <h3 id="message" class="text-lg font-bold bg-red-500 bg-opacity-70 text-white p-6 rounded-xl">
+            <p>Roses are red, violets are blue, I can't think of anyone sweeter than you.
+                I have a secret to tell you... I'm sweet on you, I can't imagine a more perfect life than spending
+                it
+                with you.</p>
+            <br>
+            <p>Would you do me the honor & make my heart skip a beat and be mine for a lifetime? I hope you'll be my
+                soulmate, my best friend & my other half for the rest of my
+                life, <span class="font-extrabold text-xl">MOULI</span>......</p>
+        </h3>
+        <h1 style="line-height: 60px;" class="mt-10 hide text-center font-extrabold text-5xl text-red-600 glow-text">MOULI, <br> Will You Be <br>
+            ❤️MINE🤍 <br> ???
+        </h1>
+    </div>
+    <div class="hide font-extrabold flex gap-6 justify-center text-xl  mb-10">
+        <button onclick="propose2()"
+            class="bg-gradient-to-r from-red-600 to-red-400 text-white px-6 py-3 rounded-xl">Yes</button>
+        <button onclick="propose()" class="bg-gradient-to-r from-red-600 to-red-400 text-white px-6 py-3 rounded-xl">Of
+            Course
+            YES!!!</button>
+    </div>
+    <script>
+        function propose() {
+            var msg = `Mouli, My love for you is infinite and beyond measure. I cherish every moment of your presence in my life. I want to spend the rest of my life only with you. You are my everything. You complete me. ILoveYouMost❤️`;
+            msg = '<span style="font-size: 30px; line-height: 40px;">' + msg + '</span>';
+            document.getElementById('message').innerHTML = msg;
+            var elements = document.getElementsByClassName("hide");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+
+        }
+
+        function propose2() {
+            var msg = `❤️ILoveYouMouli🤍`;
+            msg = '<span style="font-size: 30px; line-height: 40px;">' + msg + '</span>';
+            document.getElementById('message').innerHTML = msg;
+            var elements = document.getElementsByClassName("hide");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
